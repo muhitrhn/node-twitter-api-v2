@@ -170,7 +170,7 @@ export default class TwitterApiv1ReadOnly extends TwitterApiSubClient {
       user_id: userId,
       ...options,
     };
-    const initialRq = await this.get<TweetV1TimelineResult>('statuses/user_timeline.json', queryParams, { fullResponse: true });
+    const initialRq = await this.get<TweetV1TimelineResult>('//statuses/user_timeline.json', queryParams, { fullResponse: true });
 
     return new UserTimelineV1Paginator({
       realData: initialRq.data,
@@ -191,7 +191,7 @@ export default class TwitterApiv1ReadOnly extends TwitterApiSubClient {
       screen_name: username,
       ...options,
     };
-    const initialRq = await this.get<TweetV1TimelineResult>('statuses/user_timeline.json', queryParams, { fullResponse: true });
+    const initialRq = await this.get<TweetV1TimelineResult>('//statuses/user_timeline.json', queryParams, { fullResponse: true });
 
     return new UserTimelineV1Paginator({
       realData: initialRq.data,
